@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
+import CV from '../assets/CV/CV_AryoBimoPrakoso.pdf'
 
 const Navbar = ({ setIndex }) => {
   const [nav, setNav] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = ({ setIndex }) => {
           <a href="/#project">Projects</a>
         </li>
         <li className="hover:scale-100 cursor-pointer p-2">
-          <a href="/#projects">CV/Resume</a>
+          <a href={CV} download>CV/Resume</a>
         </li>
       </ul>
       <div className="flex md:hidden text-2xl font-bold cursor-pointer px-4" onClick={() => setNav(!nav)}>
