@@ -22,7 +22,7 @@ const Navbar = ({ setIndex }) => {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 px-[30px] md:px-[100px] bg-[#f2f2f2] h-[150px] md:h-[100px] w-full z-[1000] flex items-center justify-between transition-shadow duration-300 ${shadow ? 'shadow-lg' : ''}`}>
+    <div className={`fixed top-0 left-0 right-0 px-[30px] md:px-[100px] bg-[#f2f2f2] lg:h-[150px] md:h-[130px] h-[70px] w-[425px] md:w-full lg:w-full z-[1000] flex items-center justify-between transition-shadow duration-300 ${shadow ? 'shadow-lg' : ''}`}>
       <div className="font-bold text-[24px]">
         <button className="cursor-pointer" onClick={() => setIndex(0)}>Aryo</button>
       </div>

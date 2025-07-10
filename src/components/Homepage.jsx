@@ -15,8 +15,8 @@ const Homepage = () => {
         exit={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.4 }}
       >
-        <div id="home" className="mt-16 flex flex-col min-h-screen">
-          <div className="flex flex-row-reverse lg:flex-row w-full h-full">
+        <div id="home" className="mt-16 flex flex-col w-full">
+          <div className="flex flex-col md:flex-col lg:flex-row w-full h-full">
             {/* Content Section */}
             <div className="w-full lg:w-full flex flex-col justify-center px-6 sm:px-8 lg:pl-12 order-2 lg:order-1">
               <div className="mt-6 lg:mt-12">
@@ -65,7 +65,7 @@ const Homepage = () => {
                 <img
                   src={profil}
                   alt="Profil"
-                  className="w-full h-auto object-cover rounded-4xl"
+                  className="w-1/2 md:w-1/2 lg:w-full h-auto object-cover rounded-4xl"
                 />
               </div>
             </div>
