@@ -11,12 +11,12 @@ const runTracker = ({ setIndex }) => {
         transition={{ duration: 0.4 }}
       >
         <div className="mt-[140px] p-4 h-full">
-          <div className="flex flex-col justify justify-center w-full">
-            <div className="flex flex-row p-6 w-full justify-around">
+          <div className="flex flex-col-reverse lg:flex-col justify justify-center w-full">
+            <div className="flex flex-col md:flex-col lg:flex-row p-6 w-full justify-around">
               <h1 className="text-3xl font-bold underline underline-offset-8">
                 Run Tracker
               </h1>
-              <p className="leading-relaxed w-1/3">
+              <p className="leading-relaxed mt-8 w-full lg:w-1/3">
                 Desain aplikasi pelacak kebugaran ini mengusung pendekatan visual yang modern dan informatif, memperlihatkan alur penggunaan mulai dari halaman penyambutan yang memotivasi pengguna untuk mengejar tujuan kesehatan, hingga tampilan detail aktivitas harian seperti jumlah langkah, durasi, jarak tempuh, dan estimasi kalori yang terbakar. Elemen visual seperti ilustrasi pelari, peta rute, dan statistik pencapaian harian dirancang untuk memberikan pengalaman yang intuitif dan menyemangati pengguna melalui antarmuka yang bersih, terstruktur, dan mudah dinavigasi, menjadikan desain ini cocok untuk aplikasi yang berfokus pada kebugaran dan gaya hidup aktif.
               </p>
             </div>

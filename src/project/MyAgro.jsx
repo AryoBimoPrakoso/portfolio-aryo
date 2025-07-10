@@ -12,10 +12,10 @@ const MyAgro = () => {
             transition={{ duration: 0.4 }}
           >
             <div className="mt-[140px] p-4 h-full">
-              <div className="flex flex-col justify justify-center w-full">
-                <div className="flex flex-row p-6 w-full justify-around">
+              <div className="flex flex-col-reverse lg:flex-col justify justify-center w-full">
+                <div className="flex flex-col md:flex-col lg:flex-row p-6 w-full justify-around">
                   <h1 className="text-3xl font-bold underline underline-offset-8">Asisstant App</h1>
-                  <p className="leading-relaxed w-1/3">Desain aplikasi <span className='font-bold'>myAgro</span> menggabungkan elemen teknologi dan kemudahan akses informasi untuk mendukung aktivitas pertanian yang cerdas dan modern. Dengan tampilan awal yang menampilkan ilustrasi petani dan drone, aplikasi menciptakan kesan inovatif sejak pertama kali digunakan. Informasi cuaca yang komprehensif serta status lahan pertanian — mulai dari pertumbuhan tanaman hingga estimasi panen — disajikan secara visual dan interaktif, sehingga memudahkan petani dalam pengambilan keputusan berbasis data. Fitur penentuan lokasi lahan baru dengan dukungan peta dan pilihan lokasi semakin memperkuat fungsi aplikasi sebagai alat bantu strategis dalam pengelolaan pertanian digital. Seluruh elemen desain dirancang agar intuitif dan mendukung produktivitas petani melalui antarmuka yang ramah dan efisien.</p>
+                  <p className="leading-relaxed mt-8 w-full lg:w-1/3">Desain aplikasi <span className='font-bold'>myAgro</span> menggabungkan elemen teknologi dan kemudahan akses informasi untuk mendukung aktivitas pertanian yang cerdas dan modern. Dengan tampilan awal yang menampilkan ilustrasi petani dan drone, aplikasi menciptakan kesan inovatif sejak pertama kali digunakan. Informasi cuaca yang komprehensif serta status lahan pertanian — mulai dari pertumbuhan tanaman hingga estimasi panen — disajikan secara visual dan interaktif, sehingga memudahkan petani dalam pengambilan keputusan berbasis data. Fitur penentuan lokasi lahan baru dengan dukungan peta dan pilihan lokasi semakin memperkuat fungsi aplikasi sebagai alat bantu strategis dalam pengelolaan pertanian digital. Seluruh elemen desain dirancang agar intuitif dan mendukung produktivitas petani melalui antarmuka yang ramah dan efisien.</p>
                 </div>
     
                 <img
