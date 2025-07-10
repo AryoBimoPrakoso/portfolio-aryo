@@ -9,11 +9,11 @@ const Skills = () => {
     <>
       <div id="skills" className="h-full">
         <div className="flex flex-row w-full justify-between p-6">
-          <div className="md:text-3xl lg:text-4xl">
+          <div className="md:text-2xl lg:text-4xl">
             These are the <span className="font-bold">tools ⚙️</span> <br />I
             rely on to bring ideas to life
           </div>
-          <div className="md:text-3xl lg:text-4xl text-right">
+          <div className="md:text-2xl lg:text-4xl text-right">
             —both in design and <br />
             development.
           </div>
