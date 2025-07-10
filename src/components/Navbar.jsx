@@ -27,7 +27,7 @@ const Navbar = ({ setIndex }) => {
         <button className="cursor-pointer" onClick={() => setIndex(0)}>Aryo</button>
       </div>
       <ul className={`
-        ${nav ? "top-[150px] " : "top-[-300px]"}
+        ${nav ? "top-[70px] " : "top-[-300px]"}
         md:flex gap-2 md:items-center md:pb-0 pb-12 px-[30px]
         fixed md:static left-0 w-full md:w-auto bg-[#f2f2f2]
         transition-all ease-in duration-300 z-[10]
