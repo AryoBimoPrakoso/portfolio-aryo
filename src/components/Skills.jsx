@@ -41,8 +41,7 @@ const Skills = () => {
               <div className="text-start md:text-start lg:text-center font-bold text-2xl">
                 React
                 <div className="text-start md:text-start lg:text-center font-normal text-sm md:text-lg lg:text-xl mt-4">
-                  Mengembangkan desain antarmuka dengan mengedepankan kenyamanan
-                  dan konsistensi desain
+                  Mengimplementasikan desain kedalam sebuah website!
                 </div>
               </div>
             </div>
@@ -54,8 +53,7 @@ const Skills = () => {
               <div className="md:text-start lg:text-end font-bold text-2xl">
                 Tailwind CSS
                 <div className="md:text-start lg:text-end font-normal text-sm md:text-lg lg:text-xl mt-4">
-                  Mengembangkan desain antarmuka dengan mengedepankan kenyamanan
-                  pengguna dan konsistensi desain
+                  Membantu dalam styling dan pengembangan antarmuka website.
                 </div>
               </div>
             </div>
