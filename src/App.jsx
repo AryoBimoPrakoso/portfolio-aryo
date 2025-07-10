@@ -1,7 +1,7 @@
 import "./App.css";
 import Skills from "./components/Skills";
 import Homepage from "./components/Homepage";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { useState } from "react";
 import Project from "./components/Project";
 import Ewallet from "./project/eWallet";
