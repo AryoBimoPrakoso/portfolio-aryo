@@ -28,7 +28,7 @@ const Skills = () => {
               <div className="font-bold text-xl md:text-1xl lg:text-2xl">
                 Figma
                 <div className="font-normal text-sm md:text-lg lg:text-xl mt-4">
-                  Developing interface designs that prioritize user comfort
+                  Developing interface designs that prioritize user comfort <br/>
                   and design consistency.
                 </div>
               </div>
