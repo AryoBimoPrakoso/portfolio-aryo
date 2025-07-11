@@ -17,7 +17,7 @@ const runTracker = ({ setIndex }) => {
                 Run Tracker
               </h1>
               <p className="leading-relaxed mt-8 w-full lg:w-1/3">
-                Desain aplikasi pelacak kebugaran ini mengusung pendekatan visual yang modern dan informatif, memperlihatkan alur penggunaan mulai dari halaman penyambutan yang memotivasi pengguna untuk mengejar tujuan kesehatan, hingga tampilan detail aktivitas harian seperti jumlah langkah, durasi, jarak tempuh, dan estimasi kalori yang terbakar. Elemen visual seperti ilustrasi pelari, peta rute, dan statistik pencapaian harian dirancang untuk memberikan pengalaman yang intuitif dan menyemangati pengguna melalui antarmuka yang bersih, terstruktur, dan mudah dinavigasi, menjadikan desain ini cocok untuk aplikasi yang berfokus pada kebugaran dan gaya hidup aktif.
+                 The design of this run tracking app features a modern and informative visual approach, showing the flow of use from the welcome page that motivates users to pursue their health goals, to detailed views of daily activities such as number of steps, duration, distance traveled, and estimated calories burned. Visual elements such as runner illustrations, route maps, and daily achievement statistics are designed to provide an intuitive and inspiring experience through a clean, structured, and easy-to-navigate interface, making this design ideal for apps focused on fitness and an active lifestyle.
               </p>
             </div>
 
