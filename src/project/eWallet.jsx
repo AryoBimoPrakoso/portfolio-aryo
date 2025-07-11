@@ -15,7 +15,7 @@ const Ewallet = ({ setIndex }) => {
           <div className="flex flex-col-reverse lg:flex-col justify justify-center w-full">
             <div className="flex flex-col md:flex-col lg:flex-row p-6 w-full justify-around">
               <h1 className="text-3xl font-bold underline underline-offset-8">E-Wallet </h1>
-              <p className="leading-relaxed mt-8 w-full lg:w-1/3">Desain UI/UX e-wallet "Velox" ini menampilkan antarmuka yang modern dan intuitif dengan fitur unggulan seperti kemampuan scan QR code untuk transaksi cepat, serta grafik pemantau pengeluaran yang detail untuk membantu pengguna mengelola keuangan secara efektif. Selain itu, aplikasi ini juga menyediakan riwayat transaksi yang jelas dan fitur "Quick Send" untuk kemudahan pengiriman uang, semua disajikan dalam tata letak yang rapi dan menarik.</p>
+              <p className="leading-relaxed mt-8 w-full lg:w-1/3">The design of the <span clasName="font-bold">Velox</span> e-wallet features a modern and intuitive interface with outstanding features such as QR code scanning for fast transactions and detailed spending monitoring charts to help users manage their finances effectively. In addition, the app also provides a clear transaction history and a “Quick Send” feature for easy money transfers, all presented in a neat and attractive layout.</p>
             </div>
 
             <img
