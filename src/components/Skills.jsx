@@ -28,8 +28,8 @@ const Skills = () => {
               <div className="font-bold text-xl md:text-1xl lg:text-2xl">
                 Figma
                 <div className="font-normal text-sm md:text-lg lg:text-xl mt-4">
-                  Mengembangkan desain antarmuka dengan mengedepankan kenyamanan
-                  pengguna dan konsistensi desain
+                  Developing interface designs that prioritize user comfort
+                  and design consistency.
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@ const Skills = () => {
               <div className="text-start md:text-start lg:text-center font-bold text-2xl">
                 React
                 <div className="text-start md:text-start lg:text-center font-normal text-sm md:text-lg lg:text-xl mt-4">
-                  Mengimplementasikan desain kedalam sebuah website!
+                  Implementing the design into a website!
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Skills = () => {
               <div className="md:text-start lg:text-end font-bold text-2xl">
                 Tailwind CSS
                 <div className="md:text-start lg:text-end font-normal text-sm md:text-lg lg:text-xl mt-4">
-                  Membantu dalam styling dan pengembangan antarmuka website.
+                  Assist in styling and developing the website interface.
                 </div>
               </div>
             </div>
