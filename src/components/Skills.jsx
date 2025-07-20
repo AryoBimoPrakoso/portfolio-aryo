@@ -14,7 +14,7 @@ const Skills = () => {
             rely on to bring ideas to life
           </div>
           <div className="md:text-2xl lg:text-4xl text-right">
-            —both in design and <br />
+            both in design and <br />
             development.
           </div>
         </div>
