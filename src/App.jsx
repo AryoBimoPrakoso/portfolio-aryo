@@ -18,7 +18,7 @@ function App() {
         {index === 0 && (
           <div id="porto" className="w-full flex flex-col p-6">
             <Homepage />
-            <hr className="my-6" />
+            <hr className="mt-24 lg:m-0" />
             <Skills />
             <hr className="my-6" />
             <Project setIndex={setIndex} />
