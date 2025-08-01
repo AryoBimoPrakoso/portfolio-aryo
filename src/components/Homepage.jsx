@@ -25,7 +25,7 @@ const Homepage = () => {
                   I'm Aryo Bimo
                   <br />
                   <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-                    Junior UI/UX Designer & <br /> Aspiring Front-End Developer
+                    Junior UI/UX Designer 
                   </span>
                 </div>
                 <div className="mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed">
