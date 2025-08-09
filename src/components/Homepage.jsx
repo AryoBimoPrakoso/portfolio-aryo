@@ -3,11 +3,12 @@ import profil from "../assets/foto/foto-aryo.jpg";
 import { motion } from "framer-motion";
 
 const Homepage = () => {
-
-   // Method 3: Gmail compose with pre-filled data
+  // Method 3: Gmail compose with pre-filled data
   const openGmailWithData = (to, subject, body) => {
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(gmailUrl, '_blank');
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      to
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, "_blank");
   };
 
   return (
@@ -18,30 +19,70 @@ const Homepage = () => {
         exit={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.8 }}
       >
-        <div id="home" className="flex flex-col w-full bg-color h-full lg:h-screen px-[56px]">
+        <div
+          id="home"
+          className="flex flex-col w-full bg-color h-full lg:h-screen px-[56px]"
+        >
           <div className="flex flex-col md:flex-col lg:flex-row w-full mt-[100px]">
             {/* Content Section */}
             <div className="w-full lg:w-full flex flex-col justify-center order-2 lg:order-1 ">
               <div className="mt-6 lg:mt-12">
-                <div className="text-xl lg:text-4xl">
+                <div
+                  className="text-xl lg:text-4xl"
+                  onMouseEnter={() =>
+                    window.dispatchEvent(new Event("cursor-text-enter"))
+                  }
+                  onMouseLeave={() =>
+                    window.dispatchEvent(new Event("cursor-text-leave"))
+                  }
+                >
                   Hi there !, I'm Aryo 👋
                 </div>
-                <div className="leading-tight text-4xl lg:text-6xl xl:text-8xl text-left my-4">
+                <div
+                  className="leading-tight text-4xl lg:text-6xl xl:text-8xl text-left my-4"
+                  onMouseEnter={() =>
+                    window.dispatchEvent(new Event("cursor-text-enter"))
+                  }
+                  onMouseLeave={() =>
+                    window.dispatchEvent(new Event("cursor-text-leave"))
+                  }
+                >
                   UI/UX Designer &
                   <br />
                   Aspiring <span className="opacity-50">Frontend Dev</span>
                 </div>
-                <button onClick={() => openGmailWithData(
-                  'prakosoaryobimo@gmail.com',
-                  'Project Collaboration',
-                  'Hi, I saw your portfolio and would like to discuss a project.'
-                )} className="px-4 py-2 bg-[#0F0F0F] text-[#e6e6e6] text-sm lg:text-xl rounded-lg mt-4 cursor-pointer hover:scale-110 transition duration-300">
+                <button
+                  onClick={() =>
+                    openGmailWithData(
+                      "prakosoaryobimo@gmail.com",
+                      "Project Collaboration",
+                      "Hi, I saw your portfolio and would like to discuss a project."
+                    )
+                  }
+                  className="px-4 py-2 bg-[#0F0F0F] text-[#e6e6e6] text-sm lg:text-xl rounded-lg mt-4 cursor-pointer hover:scale-110 transition duration-300"
+                  onMouseEnter={() =>
+                    window.dispatchEvent(new Event("cursor-text-enter"))
+                  }
+                  onMouseLeave={() =>
+                    window.dispatchEvent(new Event("cursor-text-leave"))
+                  }
+                >
                   Hire me!
                 </button>
               </div>
             </div>
             <div className="flex order-1 lg:order-2">
-              <img src={profil} alt="Foto Profil" className="rounded-md justify-center items-center"/>
+              <img
+                onMouseEnter={() =>
+                  window.dispatchEvent(new Event("cursor-text-enter"))
+                }
+                onMouseLeave={() =>
+                  window.dispatchEvent(new Event("cursor-text-leave"))
+                }
+                src={profil}
+                alt="Foto Profil"
+                className="rounded-md justify-center items-center"
+              />
             </div>
           </div>
         </div>

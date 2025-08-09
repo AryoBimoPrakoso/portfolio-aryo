@@ -11,12 +11,14 @@ import MyAgro from "./project/MyAgro";
 import About from "./components/About";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import CustomCursor from "./CustomCursor";
 
 function App() {
-  const [index, setIndex] = useState(0);
+  
   return (
     <>
       <div className="overflow-x-hidden">
+        <CustomCursor />
         <Navbar />
 
         <Routes>
