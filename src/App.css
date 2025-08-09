@@ -1,4 +1,4 @@
-* {
+/* * {
   cursor: none;
 }
 
@@ -15,9 +15,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* CSS untuk tampilan dengan lebar layar maksimal 600px (umumnya smartphone) */
+  
   .cursor {
     display: none;
   }
-  /* aturan lain yang ingin diterapkan pada layar kecil */
-}
+  
+} */

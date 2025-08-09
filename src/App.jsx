@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <Navbar />
 
         <Routes>
