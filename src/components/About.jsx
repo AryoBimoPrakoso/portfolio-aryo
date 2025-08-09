@@ -15,6 +15,12 @@ const About = () => {
               <GoArrowUpRight />
             </span>
           </a>
+          <a href="https://github.com/AryoBimoPrakoso" target="_blank" className="border-b-1 flex flex-row justify-between hover:bg-[#0F0F0F] hover:text-[#F6F6F6] transition duration-300 ">
+            Github
+            <span>
+              <GoArrowUpRight />
+            </span>
+          </a>
           <a href="https://www.instagram.com/aryoobp/" target="_blank" className="border-b-1 flex flex-row justify-between hover:bg-[#0F0F0F] hover:text-[#F6F6F6] transition duration-300">
             Instagram
             <span>
