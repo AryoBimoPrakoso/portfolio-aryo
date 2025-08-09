@@ -1,13 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Aryo</title>
+    <style>
+      /* --- Custom cursor styles (non-Tailwind) --- */
+      /* sembunyikan cursor default pada desktop */
+      @media (pointer: fine) {
+        body {
+          cursor: none;
+        }
+      }
+
+      /* elemen cursor */
+      .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 22px; /* ukuran default */
+        height: 22px;
+        border-radius: 9999px; /* bulat */
+        background: #0f0f0f; /* hitam default */
+        transform: translate(-50%, -50%) scale(1);
+        pointer-events: none; /* biar gak mengganggu klik */
+        transition: transform 0.12s ease, background 0.12s ease,
+          width 0.12s ease, height 0.12s ease, opacity 0.12s ease;
+        z-index: 9999;
+        mix-blend-mode: normal; /* ubah jika butuh blending */
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); /* bisa dipakai saat hover */
+        opacity: 1;
+      }
+
+      /* mode inverse (misal saat hover elemen) */
+      .custom-cursor.inverse {
+        background: white;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ukuran lebih besar saat aktif/klik */
+      .custom-cursor.active {
+        transform: translate(-50%, -50%) scale(1.6);
+      }
+
+      /* sembunyikan cursor di perangkat touch untuk mencegah konflik */
+      @media (pointer: coarse) {
+        .custom-cursor {
+          display: none;
+        }
+        body {
+          cursor: auto;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- elemen cursor, sisipkan di akhir body -->
+    <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+
+    <script>
+      // custom-cursor.js (masukkan di akhir body atau di file JS utama)
+      (function () {
+        const cursor = document.getElementById('custom-cursor');
+        if (!cursor) return;
+
+        // skip on touch devices
+        if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) {
+          cursor.style.display = 'none';
+          return;
+        }
+
+        // Move cursor smoothly to mouse position
+        // We use requestAnimationFrame + lerp for smoother movement (optional)
+        let mouseX = window.innerWidth / 1;
+        let mouseY = window.innerHeight / 1;
+        let cursorX = mouseX;
+        let cursorY = mouseY;
+        const ease = 0.18; // kecil -> lebih smooth
+
+        document.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          // show cursor if hidden
+          cursor.style.opacity = '1';
+        });
+
+        function animate() {
+          cursorX += (mouseX - cursorX) * ease;
+          cursorY += (mouseY - cursorY) * ease;
+          cursor.style.left = cursorX + 'px';
+          cursor.style.top = cursorY + 'px';
+          requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Selector: elemen yang akan memicu inverse when hovered
+        // Kamu bisa ubah selector sesuai kebutuhan (mis. 'a, button, .hoverable')
+        const triggerSelector = '[data-cursor="inverse"], a, button, .cursor-inverse';
+
+        // add listeners to elements matching selector
+        const addTriggers = (el) => {
+          if (!el) return;
+          el.addEventListener('mouseenter', () => {
+            cursor.classList.add('inverse');
+          });
+          el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('inverse');
+          });
+
+          // scale on mousedown for feedback
+          el.addEventListener('mousedown', () => cursor.classList.add('active'));
+          el.addEventListener('mouseup', () => cursor.classList.remove('active'));
+        };
+
+        // initial attach
+        document.querySelectorAll(triggerSelector).forEach(addTriggers);
+
+        // observe DOM changes to attach to dynamically added elements (optional)
+        const observer = new MutationObserver((mutations) => {
+          for (const m of mutations) {
+            m.addedNodes.forEach(node => {
+              if (node.nodeType !== 1) return;
+              if (node.matches && node.matches(triggerSelector)) addTriggers(node);
+              node.querySelectorAll && node.querySelectorAll(triggerSelector).forEach(addTriggers);
+            });
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // hide cursor when leaving window
+        document.addEventListener('mouseleave', () => {
+          cursor.style.opacity = '0';
+        });
+        document.addEventListener('mouseenter', () => {
+          cursor.style.opacity = '1';
+        });
+
+        // optional: keyboard accessibility - show focus state inverse when element focused
+        document.addEventListener('focusin', (e) => {
+          if (e.target && e.target.matches(triggerSelector)) cursor.classList.add('inverse');
+        });
+        document.addEventListener('focusout', (e) => {
+          if (e.target && e.target.matches(triggerSelector)) cursor.classList.remove('inverse');
+        });
+      })();
+    </script>
   </body>
 </html>
