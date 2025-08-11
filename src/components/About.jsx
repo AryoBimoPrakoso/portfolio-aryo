@@ -1,9 +1,9 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import { useCursor } from "../CustomCursor";
+// import { useCursor } from "../CustomCursor";
 
 const About = () => {
-  const { setCursorVariant } = useCursor();
+  // const { setCursorVariant } = useCursor();
   return (
     <div
       id="about"
@@ -12,8 +12,8 @@ const About = () => {
       <div>
         <h2
           className="text-[32px] lg:text-[64px] w-max"
-          onMouseEnter={() => setCursorVariant("text")}
-          onMouseLeave={() => setCursorVariant("default")}
+          // onMouseEnter={() => setCursorVariant("text")}
+          // onMouseLeave={() => setCursorVariant("default")}
         >
           About
         </h2>
@@ -63,8 +63,8 @@ const About = () => {
         </div>
         <p
           className="lg:w-1/2 flex-1 lg:text-[32px]"
-          onMouseEnter={() => setCursorVariant("text")}
-          onMouseLeave={() => setCursorVariant("default")}
+          // onMouseEnter={() => setCursorVariant("text")}
+          // onMouseLeave={() => setCursorVariant("default")}
         >
           Hi there! I'm Aryo Bimo Prakoso a passionate and driven Informatics
           student with a keen interest in UI/UX design and front-end

@@ -5,17 +5,17 @@ import Kopi from "../assets/foto/landing-page.png";
 import Ewallet from "../assets/foto/EWALLET.png";
 import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
-import { useCursor } from "../CustomCursor";
+// import { useCursor } from "../CustomCursor";
 
 const Project = () => {
-  const { setCursorVariant } = useCursor();
+  // const { setCursorVariant } = useCursor();
   return (
     <div id="project" className="w-full h-full pt-12 lg:pt-24 pb-12 bg-color">
       <div className="px-6">
         <div
           className="lg:text-[64px] pb-4 w-max"
-          onMouseEnter={() => setCursorVariant("text")}
-          onMouseLeave={() => setCursorVariant("default")}
+          // onMouseEnter={() => setCursorVariant("text")}
+          // onMouseLeave={() => setCursorVariant("default")}
         >
           Let’s Explore My Design Style
           <br />
@@ -33,7 +33,6 @@ const Project = () => {
               <div className="absolute inset-0 bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black text-center p-4">
                 <h3 className="text-lg font-semibold mb-2">E-Wallet</h3>
                 <button
-                  // onClick={() => setIndex(1)}
                   className="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <Link to="/eWallet">More</Link>
@@ -50,7 +49,6 @@ const Project = () => {
               <div className="absolute inset-0  bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black text-center p-4">
                 <h3 className="text-lg font-semibold mb-2">Run Tracker</h3>
                 <button
-                  // onClick={() => setIndex(2)}
                   className="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <Link to="/runTracker">More</Link>
@@ -70,7 +68,6 @@ const Project = () => {
                   Website Profil Company
                 </h3>
                 <button
-                  // onClick={() => setIndex(3)}
                   className="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <Link to="/siKopi">More</Link>
@@ -87,7 +84,6 @@ const Project = () => {
               <div className="absolute inset-0  bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black text-center p-4">
                 <h3 className="text-lg font-semibold mb-2">Asisstant App</h3>
                 <button
-                  // onClick={() => setIndex(4)}
                   className="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                 >
                   <Link to="/myAgro">More</Link>

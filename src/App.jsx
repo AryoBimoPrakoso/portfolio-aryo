@@ -10,12 +10,12 @@ import MyAgro from "./project/MyAgro";
 import About from "./components/About";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { CursorProvider } from "./CustomCursor";
+// import { CursorProvider } from "./CustomCursor";
 
 function App() {
   return (
     <>
-      <CursorProvider>
+      {/* <CursorProvider> */}
         <div className="overflow-x-hidden">
           <Navbar />
 
@@ -40,7 +40,7 @@ function App() {
             <Route path="/myAgro" element={<MyAgro />} />
           </Routes>
         </div>
-      </CursorProvider>
+      {/* </CursorProvider> */}
     </>
   );
 }
