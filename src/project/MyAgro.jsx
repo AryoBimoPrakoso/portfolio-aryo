@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import MyAgroDetail from "../assets/foto/my-agro.png";
+import { useCursor } from "../CustomCursor";
 
 const MyAgro = () => {
+  const { setCursorVariant } = useCursor();
   return (
     <>
       <motion.div
@@ -19,12 +21,8 @@ const MyAgro = () => {
               </h1>
               <p
                 className="leading-relaxed mt-8 w-full lg:w-1/3 text-[24px]"
-                onMouseEnter={() =>
-                  window.dispatchEvent(new Event("cursor-text-enter"))
-                }
-                onMouseLeave={() =>
-                  window.dispatchEvent(new Event("cursor-text-leave"))
-                }
+                onMouseEnter={() => setCursorVariant("text")}
+                onMouseLeave={() => setCursorVariant("default")}
               >
                 The design of the <span className="font-bold">myAgro</span> app
                 is the result of a collaboration between our team of three, with
@@ -47,7 +45,9 @@ const MyAgro = () => {
             <img
               src={MyAgroDetail}
               alt="Detail Wallet"
-              className="m-auto rounded-xl w-8xl "
+              className="m-auto rounded-xl w-8xl"
+              onMouseEnter={() => setCursorVariant("text")}
+              onMouseLeave={() => setCursorVariant("default")}
             />
           </div>
         </div>

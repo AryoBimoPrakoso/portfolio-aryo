@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import WebKopi from "../assets/foto/websiteKopi.png";
+import { useCursor } from "../CustomCursor";
 
 const Kopi = () => {
+  const { setCursorVariant } = useCursor();
   return (
     <>
       <motion.div
@@ -19,12 +21,8 @@ const Kopi = () => {
               </h1>
               <p
                 className="leading-relaxed mt-8 w-full lg:w-1/3 text-[24px]"
-                onMouseEnter={() =>
-                  window.dispatchEvent(new Event("cursor-text-enter"))
-                }
-                onMouseLeave={() =>
-                  window.dispatchEvent(new Event("cursor-text-leave"))
-                }
+                onMouseEnter={() => setCursorVariant("text")}
+                onMouseLeave={() => setCursorVariant("default")}
               >
                 The design of the <span className="font-bold">Sikopi</span>{" "}
                 website presents a strong and visually appealing brand identity,

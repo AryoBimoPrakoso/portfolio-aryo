@@ -5,17 +5,17 @@ import Kopi from "../assets/foto/landing-page.png";
 import Ewallet from "../assets/foto/EWALLET.png";
 import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
-// import { useCursor } from "../CustomCursor";
+import { useCursor } from "../CustomCursor";
 
 const Project = () => {
-  // const { setCursorVariant } = useCursor();
+  const { setCursorVariant } = useCursor();
   return (
     <div id="project" className="w-full h-full pt-12 lg:pt-24 pb-12 bg-color">
       <div className="px-6">
         <div
           className="lg:text-[64px] pb-4 w-max"
-          // onMouseEnter={() => setCursorVariant("text")}
-          // onMouseLeave={() => setCursorVariant("default")}
+          onMouseEnter={() => setCursorVariant("text")}
+          onMouseLeave={() => setCursorVariant("default")}
         >
           Let’s Explore My Design Style
           <br />

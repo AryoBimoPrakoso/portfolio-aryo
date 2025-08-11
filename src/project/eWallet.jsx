@@ -1,8 +1,10 @@
 import React from "react";
 import DetailWallet from "../assets/foto/e-wallet.png";
 import { motion } from "framer-motion";
+import { useCursor } from "../CustomCursor";
 
-const Ewallet = ({ setIndex }) => {
+const Ewallet = () => {
+  const { setCursorVariant } = useCursor();
   return (
     <>
       <motion.div
@@ -19,12 +21,8 @@ const Ewallet = ({ setIndex }) => {
               </h1>
               <p
                 className="leading-relaxed mt-8 w-full lg:w-1/3 text-[24px]"
-                onMouseEnter={() =>
-                  window.dispatchEvent(new Event("cursor-text-enter"))
-                }
-                onMouseLeave={() =>
-                  window.dispatchEvent(new Event("cursor-text-leave"))
-                }
+                onMouseEnter={() => setCursorVariant("text")}
+                onMouseLeave={() => setCursorVariant("default")}
               >
                 The design of the <span clasName="font-bold">Velox</span>{" "}
                 e-wallet features a modern and intuitive interface with
@@ -41,6 +39,8 @@ const Ewallet = ({ setIndex }) => {
               src={DetailWallet}
               alt="Detail Wallet"
               className="rounded-xl w-full"
+              onMouseEnter={() => setCursorVariant("text")}
+              onMouseLeave={() => setCursorVariant("default")}
             />
           </div>
         </div>

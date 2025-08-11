@@ -32,20 +32,6 @@ export const CursorProvider = ({ children }) => {
     },
   };
 
-  // Event handler bisa di-trigger dari luar lewat custom event
-  // useEffect(() => {
-  //   const enter = () => setCursorVariant("text");
-  //   const leave = () => setCursorVariant("default");
-
-  //   window.addEventListener("cursor-text-enter", enter);
-  //   window.addEventListener("cursor-text-leave", leave);
-
-  //   return () => {
-  //     window.removeEventListener("cursor-text-enter", enter);
-  //     window.removeEventListener("cursor-text-leave", leave);
-  //   };
-  // }, []);
-
   return (
     <CursorContext.Provider value={{ setCursorVariant }}>
       {children}
@@ -53,7 +39,12 @@ export const CursorProvider = ({ children }) => {
         className="cursor"
         variants={variants}
         animate={cursorVariant}
-        transition={{ type: "spring", stiffness: 500, damping: 28 }}
+        transition={{
+          type: "spring",
+          stiffness: 250, // lebih rendah kalau mau lebih lambat
+          damping: 18, // lebih tinggi kalau mau tanpa pantulan
+          mass: 0.4,
+        }}
       />
     </CursorContext.Provider>
   );
