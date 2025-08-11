@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import profil from "../assets/foto/foto-aryo.jpg";
 import { motion } from "framer-motion";
+import { useCursor } from "../CustomCursor";
 
 const Homepage = () => {
   // Method 3: Gmail compose with pre-filled data
@@ -10,6 +11,7 @@ const Homepage = () => {
     )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(gmailUrl, "_blank");
   };
+  const { setCursorVariant } = useCursor();
 
   return (
     <>
@@ -29,23 +31,15 @@ const Homepage = () => {
               <div className="mt-6 lg:mt-12">
                 <div
                   className="text-xl lg:text-4xl"
-                  onMouseEnter={() =>
-                    window.dispatchEvent(new Event("cursor-text-enter"))
-                  }
-                  onMouseLeave={() =>
-                    window.dispatchEvent(new Event("cursor-text-leave"))
-                  }
+                  onMouseEnter={() => setCursorVariant("text")}
+                  onMouseLeave={() => setCursorVariant("default")}
                 >
                   Hi there !, I'm Aryo 👋
                 </div>
                 <div
                   className="leading-tight text-4xl lg:text-6xl xl:text-8xl text-left my-4"
-                  onMouseEnter={() =>
-                    window.dispatchEvent(new Event("cursor-text-enter"))
-                  }
-                  onMouseLeave={() =>
-                    window.dispatchEvent(new Event("cursor-text-leave"))
-                  }
+                  onMouseEnter={() => setCursorVariant("text")}
+                  onMouseLeave={() => setCursorVariant("default")}
                 >
                   UI/UX Designer &
                   <br />
@@ -60,12 +54,8 @@ const Homepage = () => {
                     )
                   }
                   className="px-4 py-2 bg-[#0F0F0F] text-[#e6e6e6] text-sm lg:text-xl rounded-lg mt-4 cursor-pointer hover:scale-110 transition duration-300"
-                  onMouseEnter={() =>
-                    window.dispatchEvent(new Event("cursor-text-enter"))
-                  }
-                  onMouseLeave={() =>
-                    window.dispatchEvent(new Event("cursor-text-leave"))
-                  }
+                  onMouseEnter={() => setCursorVariant("text")}
+                  onMouseLeave={() => setCursorVariant("default")}
                 >
                   Hire me!
                 </button>
@@ -73,12 +63,8 @@ const Homepage = () => {
             </div>
             <div className="flex order-1 lg:order-2">
               <img
-                onMouseEnter={() =>
-                  window.dispatchEvent(new Event("cursor-text-enter"))
-                }
-                onMouseLeave={() =>
-                  window.dispatchEvent(new Event("cursor-text-leave"))
-                }
+                onMouseEnter={() => setCursorVariant("text")}
+                onMouseLeave={() => setCursorVariant("default")}
                 src={profil}
                 alt="Foto Profil"
                 className="rounded-md justify-center items-center"

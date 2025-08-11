@@ -1,8 +1,10 @@
 // src/components/CustomCursor.jsx
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion"; 
+import { useState, useEffect, createContext, useContext } from "react";
+import { motion } from "framer-motion";
 
-export default function CustomCursor() {
+const CursorContext = createContext();
+
+export const CursorProvider = ({ children }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState("default");
 
@@ -31,25 +33,30 @@ export default function CustomCursor() {
   };
 
   // Event handler bisa di-trigger dari luar lewat custom event
-  useEffect(() => {
-    const enter = () => setCursorVariant("text");
-    const leave = () => setCursorVariant("default");
+  // useEffect(() => {
+  //   const enter = () => setCursorVariant("text");
+  //   const leave = () => setCursorVariant("default");
 
-    window.addEventListener("cursor-text-enter", enter);
-    window.addEventListener("cursor-text-leave", leave);
+  //   window.addEventListener("cursor-text-enter", enter);
+  //   window.addEventListener("cursor-text-leave", leave);
 
-    return () => {
-      window.removeEventListener("cursor-text-enter", enter);
-      window.removeEventListener("cursor-text-leave", leave);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("cursor-text-enter", enter);
+  //     window.removeEventListener("cursor-text-leave", leave);
+  //   };
+  // }, []);
 
   return (
-    <motion.div
-      className="cursor"
-      variants={variants}
-      animate={cursorVariant}
-      transition={{ type: "spring", stiffness: 500, damping: 28 }}
-    />
+    <CursorContext.Provider value={{ setCursorVariant }}>
+      {children}
+      <motion.div
+        className="cursor"
+        variants={variants}
+        animate={cursorVariant}
+        transition={{ type: "spring", stiffness: 500, damping: 28 }}
+      />
+    </CursorContext.Provider>
   );
-}
+};
+
+export const useCursor = () => useContext(CursorContext);

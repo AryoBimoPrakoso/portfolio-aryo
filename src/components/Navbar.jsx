@@ -3,10 +3,12 @@ import { IoClose } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import CV from "../assets/CV/CV_AryoBimoPrakoso.pdf";
 import { Link } from "react-router-dom";
+import { useCursor } from "../CustomCursor";
 
 const Navbar = ({ setIndex }) => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const { setCursorVariant } = useCursor();
 
   useEffect(() => {
     const handleShadow = () => {
@@ -33,12 +35,8 @@ const Navbar = ({ setIndex }) => {
         <button
           className="cursor-pointer"
           onClick={() => setIndex(0)}
-          onMouseEnter={() =>
-            window.dispatchEvent(new Event("cursor-text-enter"))
-          }
-          onMouseLeave={() =>
-            window.dispatchEvent(new Event("cursor-text-leave"))
-          }
+          onMouseEnter={() => setCursorVariant("text")}
+          onMouseLeave={() => setCursorVariant("default")}
         >
           aryo
         </button>
@@ -55,12 +53,8 @@ const Navbar = ({ setIndex }) => {
           <a
             href={CV}
             download
-            onMouseEnter={() =>
-              window.dispatchEvent(new Event("cursor-text-enter"))
-            }
-            onMouseLeave={() =>
-              window.dispatchEvent(new Event("cursor-text-leave"))
-            }
+            onMouseEnter={() => setCursorVariant("text")}
+            onMouseLeave={() => setCursorVariant("default")}
           >
             CV/Resume
           </a>
