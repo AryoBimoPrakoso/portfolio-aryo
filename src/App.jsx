@@ -11,6 +11,7 @@ import About from "./components/About";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { CursorProvider } from "./CustomCursor";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
                 </>
               }
             />
-
+            <Route path="/contact" element={<Contact />} />
             {/* Routes untuk detail project */}
             <Route path="/eWallet" element={<Ewallet />} />
             <Route path="/runTracker" element={<RunTracker />} />

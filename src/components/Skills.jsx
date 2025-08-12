@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <>
       <div id="skills" className="h-full bg-color px-[16px] lg:px-[56px] py-8 lg:py-32 overflow-x-hidden">
-        <div className="w-full flex flew-row justify-around gap-4 lg:gap-12 h-full py-8 lg:py-16 border-[#0F0F0F] border-t-1 border-b-1">
+        <div className="w-full flex flew-row justify-around gap-4 lg:gap-12 h-full py-8 lg:py-16 border-[#0F0F0F] border-y-1">
             <div className="flex flex-row justify-center items-center gap-1 lg:gap-3 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" >
               <img
                 src={FigmaSVG1}

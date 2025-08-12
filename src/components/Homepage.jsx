@@ -43,7 +43,7 @@ const Homepage = () => {
                 >
                   UI/UX Designer &
                   <br />
-                  Aspiring <span className="opacity-50">Frontend Dev</span>
+                  Aspiring <span className="text-[#bfbfbf]">Frontend Dev</span>
                 </div>
                 <button
                   onClick={() =>
@@ -53,7 +53,7 @@ const Homepage = () => {
                       "Hi, I saw your portfolio and would like to discuss a project."
                     )
                   }
-                  className="px-4 py-2 bg-[#0F0F0F] text-[#e6e6e6] text-sm lg:text-xl rounded-lg mt-4 cursor-pointer hover:scale-110 transition duration-300"
+                  className="px-4 py-2 bg-[#0F0F0F] text-[#e6e6e6] text-sm lg:text-xl rounded-xl mt-4 cursor-pointer hover:scale-110 transition duration-300"
                   onMouseEnter={() => setCursorVariant("text")}
                   onMouseLeave={() => setCursorVariant("default")}
                 >

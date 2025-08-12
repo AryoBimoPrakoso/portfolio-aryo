@@ -41,7 +41,7 @@ export const CursorProvider = ({ children }) => {
         animate={cursorVariant}
         transition={{
           type: "spring",
-          stiffness: 250, // lebih rendah kalau mau lebih lambat
+          stiffness: 180, // lebih rendah kalau mau lebih lambat
           damping: 18, // lebih tinggi kalau mau tanpa pantulan
           mass: 0.4,
         }}

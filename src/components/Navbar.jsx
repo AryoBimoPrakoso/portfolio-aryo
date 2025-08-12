@@ -49,6 +49,15 @@ const Navbar = () => {
       `}
       >
         <li className="hover:bg-[#0f0f0f] hover:text-[#e6e6e6] text-[16px] lg:text-[20px] transition duration-300 rounded-xl cursor-pointer p-2">
+          <Link 
+            onMouseEnter={() => setCursorVariant("text")}
+            onMouseLeave={() => setCursorVariant("default")}
+            to="/contact"
+          >
+            Contact
+          </Link>
+        </li>
+        <li className="hover:bg-[#0f0f0f] hover:text-[#e6e6e6] text-[16px] lg:text-[20px] transition duration-300 rounded-xl cursor-pointer p-2">
           <a
             href={CV}
             download
