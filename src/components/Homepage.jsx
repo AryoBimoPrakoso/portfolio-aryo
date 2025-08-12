@@ -34,7 +34,7 @@ const Homepage = () => {
                   onMouseEnter={() => setCursorVariant("text")}
                   onMouseLeave={() => setCursorVariant("default")}
                 >
-                  Hi there !, I'm Aryo 👋
+                  Hi there! I'm Aryo 👋
                 </div>
                 <div
                   className="leading-tight text-4xl lg:text-6xl xl:text-8xl text-left my-4"
@@ -78,3 +78,4 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
