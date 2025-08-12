@@ -43,7 +43,7 @@ const Homepage = () => {
                 >
                   UI/UX Designer &
                   <br />
-                  Aspiring <span className="text-[#bfbfbf]">Frontend Dev</span>
+                  <span className="text-[#bfbfbf]">Aspiring</span> Frontend Dev
                 </div>
                 <button
                   onClick={() =>
