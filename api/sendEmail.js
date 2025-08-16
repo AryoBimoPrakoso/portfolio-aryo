@@ -115,7 +115,7 @@ export async function sendContactEmail(contactData) {
 
     // Email ke Anda (pemilik website)
     const mailOptionsToYou = {
-      from: MY_EMAIL,
+      from: email,
       to: MY_EMAIL, // Email dikirim ke diri sendiri
       subject: `📩 New Contact Form Message from ${name}`,
       html: `
