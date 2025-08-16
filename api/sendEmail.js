@@ -36,55 +36,55 @@ try {
 }
 
 // Fungsi asli untuk test email
-export async function sendTestEmail(to) {
-  try {
-    console.log("🔄 Getting access token...");
-    const ACCESS_TOKEN = await oAuth2Client.getAccessToken();
+// export async function sendTestEmail(to) {
+//   try {
+//     console.log("🔄 Getting access token...");
+//     const ACCESS_TOKEN = await oAuth2Client.getAccessToken();
     
-    if (!ACCESS_TOKEN || !ACCESS_TOKEN.token) {
-      throw new Error("Failed to get access token");
-    }
+//     if (!ACCESS_TOKEN || !ACCESS_TOKEN.token) {
+//       throw new Error("Failed to get access token");
+//     }
     
-    console.log("✅ Access token obtained");
+//     console.log("✅ Access token obtained");
 
-    const transport = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        type: "OAuth2",
-        user: MY_EMAIL,
-        clientId: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN.trim(),
-        accessToken: ACCESS_TOKEN.token,
-      },
-    });
+//     const transport = nodemailer.createTransport({
+//       service: "gmail",
+//       auth: {
+//         type: "OAuth2",
+//         user: MY_EMAIL,
+//         clientId: CLIENT_ID,
+//         clientSecret: CLIENT_SECRET,
+//         refreshToken: REFRESH_TOKEN.trim(),
+//         accessToken: ACCESS_TOKEN.token,
+//       },
+//     });
 
-    console.log("📧 Sending test email to:", to);
+//     console.log("📧 Sending test email to:", to);
 
-    const mailOptions = {
-      from: MY_EMAIL,
-      to,
-      subject: "🌻 This Is Sent By NodeMailer 🌻",
-      html: `
-        <p>Hey ${to},</p>
-        <p>🌻 This Is A Test Mail Sent By NodeMailer 🌻</p>
-        <p>Thank you</p>
-      `,
-    };
+//     const mailOptions = {
+//       from: MY_EMAIL,
+//       to,
+//       subject: "🌻 This Is Sent By NodeMailer 🌻",
+//       html: `
+//         <p>Hey ${to},</p>
+//         <p>🌻 This Is A Test Mail Sent By NodeMailer 🌻</p>
+//         <p>Thank you</p>
+//       `,
+//     };
 
-    const result = await transport.sendMail(mailOptions);
-    console.log("✅ Test email sent successfully:", result.messageId);
-    return result;
-  } catch (err) {
-    console.error("❌ Error sending test email:", err);
-    console.error("❌ Error details:", {
-      message: err.message,
-      code: err.code,
-      command: err.command
-    });
-    throw err;
-  }
-}
+//     const result = await transport.sendMail(mailOptions);
+//     console.log("✅ Test email sent successfully:", result.messageId);
+//     return result;
+//   } catch (err) {
+//     console.error("❌ Error sending test email:", err);
+//     console.error("❌ Error details:", {
+//       message: err.message,
+//       code: err.code,
+//       command: err.command
+//     });
+//     throw err;
+//   }
+// }
 
 // Fungsi baru untuk mengirim email dari contact form
 export async function sendContactEmail(contactData) {

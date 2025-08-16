@@ -2,9 +2,6 @@
   "functions": {
     "api/send-contact.js": {
       "maxDuration": 15
-    },
-    "api/send-test-email.js": {
-      "maxDuration": 15
     }
   },
   "rewrites": [
