@@ -6,5 +6,8 @@
     "api/send-test-email.js": {
       "maxDuration": 15
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
