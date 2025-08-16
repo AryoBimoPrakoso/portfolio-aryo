@@ -12,20 +12,20 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { CursorProvider } from "./CustomCursor";
 import Contact from "./components/Contact";
+import Notfound from "./components/NotFound";
 
 function App() {
   return (
     <>
       <CursorProvider>
         <div className="overflow-x-hidden">
-          <Navbar />
-
           <Routes>
             {/* Route untuk halaman utama */}
             <Route
               path="/"
               element={
                 <>
+                  <Navbar />
                   <Homepage />
                   <Skills />
                   <About />
@@ -39,6 +39,7 @@ function App() {
             <Route path="/runTracker" element={<RunTracker />} />
             <Route path="/siKopi" element={<Kopi />} />
             <Route path="/myAgro" element={<MyAgro />} />
+            <Route path="*" element={<Notfound />} />
           </Routes>
         </div>
       </CursorProvider>

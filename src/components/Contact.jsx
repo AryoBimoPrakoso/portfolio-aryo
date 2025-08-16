@@ -137,8 +137,8 @@ const Contact = () => {
                 Send me a message using the form, and I'll get back to you
                 shortly.
               </p>
-              <p className="opacity-50 text-md lg:text-xl">
-                Based on Jakarta, Indonesia
+              <p className="opacity-60 text-md lg:text-xl">
+              📍Based on Jakarta, Indonesia
               </p>
             </div>
           </div>
