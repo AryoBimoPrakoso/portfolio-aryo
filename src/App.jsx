@@ -19,13 +19,13 @@ function App() {
     <>
       <CursorProvider>
         <div className="overflow-x-hidden">
+          <Navbar />
           <Routes>
             {/* Route untuk halaman utama */}
             <Route
               path="/"
               element={
                 <>
-                  <Navbar />
                   <Homepage />
                   <Skills />
                   <About />
