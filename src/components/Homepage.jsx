@@ -23,7 +23,7 @@ const Homepage = () => {
       >
         <div
           id="home"
-          className="flex flex-col w-full bg-color h-full lg:h-screen px-[56px]"
+          className="flex flex-col w-full bg-color h-full px-[56px]"
         >
           <div className="flex flex-col md:flex-col lg:flex-row w-full mt-[100px]">
             {/* Content Section */}
@@ -61,13 +61,13 @@ const Homepage = () => {
                 </button>
               </div>
             </div>
-            <div className="flex order-1 lg:order-2">
+            <div className="flex order-1 lg:order-2 w-full lg:w-1/2 justify-center items-center">
               <img
                 onMouseEnter={() => setCursorVariant("text")}
                 onMouseLeave={() => setCursorVariant("default")}
                 src={profil}
                 alt="Foto Profil"
-                className="rounded-md justify-center items-center"
+                className="rounded-md w-3/4 lg:w-full"
               />
             </div>
           </div>

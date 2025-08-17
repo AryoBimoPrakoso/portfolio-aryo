@@ -1,6 +1,11 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { useCursor } from "../CustomCursor";
+import dribbleSVG from "../assets/svg/dribble.svg";
+import githubSVG from "../assets/svg/github.svg";
+import instagramSVG from "../assets/svg/instagram.svg";
+import linkedinSVG from "../assets/svg/linkedin.svg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { setCursorVariant } = useCursor();
@@ -18,8 +23,10 @@ const About = () => {
           About
         </h2>
       </div>
+
       <div className="flex flex-col lg:flex-row w-full justify-between gap-8">
-        <div className="flex flex-col gap-[16px] flex-1 lg:text-[32px]">
+        {/* Untuk desktop */}
+        <div className="hidden lg:flex flex-col  gap-2 lg:gap-4 flex-1 lg:text-[32px]">
           <a
             href="https://www.linkedin.com/in/aryo-bimo-prakoso-746001347/"
             target="_blank"
@@ -73,6 +80,21 @@ const About = () => {
           and functionality. I'm constantly learning and expanding my skill set
           to build impactful and accessible web interfaces.
         </p>
+        {/* Untuk Mobile */}
+        <div className="flex lg:hidden flex-row gap-2 w-full ">
+          <a href="https://www.linkedin.com/in/aryo-bimo-prakoso-746001347" target="_blank">
+            <img className="w-6" src={linkedinSVG} alt="Linkedin Aryo" />
+          </a>
+          <a href="https://dribbble.com/aryobimop" target="_blank">
+            <img className="w-6" src={dribbleSVG} alt="Linkedin Aryo" />
+          </a>
+          <a href="https://github.com/AryoBimoPrakoso" target="_blank">
+            <img className="w-6" src={githubSVG} alt="Linkedin Aryo" />
+          </a>
+          <a href="https://www.instagram.com/aryoobp/" target="_blank">
+            <img className="w-6" src={instagramSVG} alt="Linkedin Aryo" />
+          </a>
+        </div>
       </div>
     </div>
   );

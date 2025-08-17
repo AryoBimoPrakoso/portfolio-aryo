@@ -17,7 +17,7 @@ const runTracker = ({ setIndex }) => {
                 Run Tracker
               </h1>
               <p
-                className="leading-relaxed mt-8 w-full lg:w-1/3 text-[24px]"
+                className="leading-relaxed mt-8 w-full lg:w-1/3 text-[20px] lg:text-[24px]"
                 onMouseEnter={() =>
                   window.dispatchEvent(new Event("cursor-text-enter"))
                 }

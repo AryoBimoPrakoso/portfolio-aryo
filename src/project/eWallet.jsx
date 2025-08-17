@@ -17,10 +17,10 @@ const Ewallet = () => {
           <div className="flex flex-col-reverse lg:flex-col justify justify-center w-full">
             <div className="flex flex-col md:flex-col lg:flex-row p-6 w-full justify-around">
               <h1 className="text-3xl font-bold underline underline-offset-8">
-                E-Wallet{" "}
+                E-Wallet
               </h1>
               <p
-                className="leading-relaxed mt-8 w-full lg:w-1/3 text-[24px]"
+                className="leading-relaxed mt-8 w-full lg:w-1/3 text-[20px] lg:text-[24px]"
                 onMouseEnter={() => setCursorVariant("text")}
                 onMouseLeave={() => setCursorVariant("default")}
               >
