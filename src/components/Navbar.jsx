@@ -32,13 +32,15 @@ const Navbar = () => {
       }`}
     >
       <div className="text-[32px]">
-        <button
-          className="cursor-pointer"
-          onMouseEnter={() => setCursorVariant("text")}
-          onMouseLeave={() => setCursorVariant("default")}
-        >
-          aryo
-        </button>
+        <Link to="/">
+          <button
+            className="cursor-pointer"
+            onMouseEnter={() => setCursorVariant("text")}
+            onMouseLeave={() => setCursorVariant("default")}
+          >
+            aryo
+          </button>
+        </Link>
       </div>
       <ul
         className={`
@@ -49,7 +51,16 @@ const Navbar = () => {
       `}
       >
         <li className="hover:bg-[#0f0f0f] hover:text-[#e6e6e6] text-[16px] lg:text-[20px] transition duration-300 rounded-xl cursor-pointer p-2">
-          <Link 
+          <Link
+            onMouseEnter={() => setCursorVariant("text")}
+            onMouseLeave={() => setCursorVariant("default")}
+            to="/my-project"
+          >
+            Project
+          </Link>
+        </li>
+        <li className="hover:bg-[#0f0f0f] hover:text-[#e6e6e6] text-[16px] lg:text-[20px] transition duration-300 rounded-xl cursor-pointer p-2">
+          <Link
             onMouseEnter={() => setCursorVariant("text")}
             onMouseLeave={() => setCursorVariant("default")}
             to="/contact"

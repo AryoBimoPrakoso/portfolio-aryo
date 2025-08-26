@@ -11,7 +11,7 @@ const Project = () => {
   const { setCursorVariant } = useCursor();
   return (
     <div id="project" className="w-full h-full pt-12 lg:pt-24 pb-12 bg-color">
-      <div className="px-6">
+      <div className="px-14">
         <div
           className="lg:text-[64px] pb-4 w-max"
           onMouseEnter={() => setCursorVariant("text")}

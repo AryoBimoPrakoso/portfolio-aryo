@@ -2,6 +2,7 @@ import React from "react";
 import profil from "../assets/foto/foto-aryo.jpg";
 import { motion } from "framer-motion";
 import { useCursor } from "../CustomCursor";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   // Method 3: Gmail compose with pre-filled data

@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { sendTestEmail, sendContactEmail } from "./sendEmail.js";
+import { sendContactEmail } from "./sendEmail.js";
 
 dotenv.config();
 
@@ -21,19 +21,19 @@ app.get("/", (req, res) => {
   res.send("Email Server is running! Use /send-email for test or /send-contact for contact form");
 });
 
-// Route untuk test email (yang sudah ada)
-app.get("/send-email", async (_, res) => {
-  try {
-    const to = process.env.TEST_RECEIVER;
-    if (!to) {
-      throw new Error("Please set TEST_RECEIVER in .env");
-    }
-    const info = await sendTestEmail(to);
-    res.json({ success: true, info });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
-  }
-});
+// // Route untuk test email (yang sudah ada)
+// app.get("/send-email", async (_, res) => {
+//   try {
+//     const to = process.env.TEST_RECEIVER;
+//     if (!to) {
+//       throw new Error("Please set TEST_RECEIVER in .env");
+//     }
+//     const info = await sendTestEmail(to);
+//     res.json({ success: true, info });
+//   } catch (error) {
+//     res.status(500).json({ success: false, error: error.message });
+//   }
+// });
 
 // Route baru untuk contact form
 app.post("/send-contact", async (req, res) => {
