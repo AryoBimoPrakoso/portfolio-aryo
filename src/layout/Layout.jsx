@@ -24,7 +24,7 @@ const Layout = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onMyProjec = pathname === "/my-project/web-music-player";
+  const onMyProjec = pathname === "/web-music-player";
   const showNavbar = !(onMyProjec && isTop);
 
   return (

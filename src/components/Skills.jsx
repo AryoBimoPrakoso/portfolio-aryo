@@ -1,15 +1,25 @@
 import React from "react";
-import FigmaSVG1 from "../assets/svg/figma.svg"
-import ReactSVG1 from "../assets/svg/react.svg"
-import JsSVG1 from "../assets/svg/javascript.svg"
-import TailwindSVG1 from "../assets/svg/tailwind.svg"
+import FigmaSVG1 from "../assets/svg/figma.svg";
+import ReactSVG1 from "../assets/svg/react.svg";
+import JsSVG1 from "../assets/svg/javascript.svg";
+import TailwindSVG1 from "../assets/svg/tailwind.svg";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <>
-      <div id="skills" className="h-full bg-color px-[16px] lg:px-[56px] py-8 lg:py-32 overflow-x-hidden">
-        <div className="w-full flex flew-row justify-around gap-4 lg:gap-12 h-full py-8 lg:py-16 border-[#0F0F0F] border-y-1">
-            <div className="flex flex-row justify-center items-center gap-1 lg:gap-3 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" >
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div
+          id="skills"
+          className="h-full bg-color px-[16px] lg:px-[56px] py-8 lg:py-32 overflow-x-hidden"
+        >
+          <div className="w-full flex flew-row justify-around gap-4 lg:gap-12 h-full py-8 lg:py-16 border-[#0F0F0F] border-y-1">
+            <div className="flex flex-row justify-center items-center gap-1 lg:gap-3 grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
               <img
                 src={FigmaSVG1}
                 alt="Figma"
@@ -41,8 +51,9 @@ const Skills = () => {
               />
               <h2 className="lg:text-3xl">Javascript</h2>
             </div>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

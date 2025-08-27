@@ -1,5 +1,5 @@
 import React from "react";
-import profil from "../assets/foto/foto-aryo.jpg";
+import profil from "../assets/img/foto-aryo.jpg";
 import { motion } from "framer-motion";
 import { useCursor } from "../CustomCursor";
 import { Link } from "react-router-dom";
