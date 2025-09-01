@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import CV from "../assets/CV/CV_AryoBimoPrakoso.pdf";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useCursor } from "../CustomCursor";
 
 const Navbar = () => {
@@ -18,7 +18,6 @@ const Navbar = () => {
         setShadow(false);
       }
     };
-
     window.addEventListener("scroll", handleShadow);
 
     // Optional cleanup
@@ -27,7 +26,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 px-[30px] md:px-[100px] bg-[#f6f6f6] lg:h-[100px] md:h-[130px] h-[70px] w-full md:w-full lg:w-full z-[999] flex items-center justify-between transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 right-0 px-[30px] md:px-[100px] bg-[#f6f6f6] py-8 h-[50px] w-full md:w-full lg:w-full z-[999] flex items-center justify-between transition-shadow duration-300 ${
         shadow ? "shadow-lg" : ""
       }`}
     >

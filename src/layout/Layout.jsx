@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const Layout = () => {
@@ -24,13 +24,13 @@ const Layout = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onMyProjec = pathname === "/web-music-player";
+  const onMyProjec = pathname === '/my-project';
   const showNavbar = !(onMyProjec && isTop);
 
   return (
     <div>
       <div
-        className={`fixed top-0 left-0 right-0 px-[30px] md:px-[100px] bg-[#f6f6f6] lg:h-[100px] md:h-[130px] h-[70px] w-full md:w-full lg:w-full z-[999] flex items-center justify-between transition-all ease-in-out duration-300 ${
+        className={`fixed top-0 left-0 right-0 px-[30px] md:px-[100px] w-full md:w-full lg:w-full z-[999] flex items-center justify-between transition-all ease-in-out duration-300 ${
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >

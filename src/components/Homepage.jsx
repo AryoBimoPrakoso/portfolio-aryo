@@ -36,6 +36,7 @@ const Homepage = () => {
                   onMouseLeave={() => setCursorVariant("default")}
                 >
                   Hi there! I'm Aryo 👋
+                  
                 </div>
                 <div
                   className="leading-tight text-4xl lg:text-6xl xl:text-8xl text-left my-4"
@@ -71,6 +72,9 @@ const Homepage = () => {
                 className="rounded-md w-3/4 lg:w-full"
               />
             </div>
+          </div>
+          <div>
+            
           </div>
         </div>
       </motion.div>

@@ -38,7 +38,9 @@ const Project = () => {
                 <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
                   <h3 className="text-lg font-semibold mb-2">{design.title}</h3>
                   <button className="px-4 py-2 bg-white text-black rounded-md hover:scale-110 transition-all duration-300 cursor-pointer">
-                    <Link to={`/design/${design.id}/${design.title}`}>More</Link>
+                    <Link to={`/design/${design.id}/${design.title}`}>
+                      More
+                    </Link>
                   </button>
                 </div>
               </div>

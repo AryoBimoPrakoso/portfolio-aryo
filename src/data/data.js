@@ -12,6 +12,10 @@ import runTrackerThumbnail from "../assets/img/thumbnail-design/run-tracker-thum
 // Project Fe
 import webMusicPlayer from "../assets/img/thumbnail-fe/web-music-player.png";
 
+
+// Video
+import webMusicPlayerMp4 from "../assets/video/0822.mp4";
+
 export const dataProject = [
   {
     id: 1,
@@ -21,53 +25,21 @@ export const dataProject = [
       B: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
       C: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
     },
-    thumbnail: "../assets/img/thumbnail-fe/web-music-player.png",
-    video: "../assets/video/0822.mp4",
+    thumbnail: webMusicPlayer,
+    video: webMusicPlayerMp4,
   },
   {
     id: 2,
-    title: "Web Music Player",
+    title: "Contoh 2",
     description: {
       A: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
       B: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
       C: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
     },
-    thumbnail: "../assets/img/thumbnail-fe/web-music-player.png",
-    video: "../assets/video/0822.mp4",
+    thumbnail: webMusicPlayer,
+    video: webMusicPlayerMp4,
   },
-  {
-    id: 3,
-    title: "Web Music Player",
-    description: {
-      A: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-      B: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-      C: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-    },
-    thumbnail: "../assets/img/thumbnail-fe/web-music-player.png",
-    video: "../assets/video/0822.mp4",
-  },
-  {
-    id: 4,
-    title: "Web Music Player",
-    description: {
-      A: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-      B: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-      C: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-    },
-    thumbnail: "../assets/img/thumbnail-fe/web-music-player.png",
-    video: "../assets/video/0822.mp4",
-  },
-  {
-    id: 5,
-    title: "Web Music Player",
-    description: {
-      A: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-      B: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-      C: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam harum sint? Dolorum doloribus culpa vel sed, iste soluta recusandae ab. Iure eos excepturi ipsum non quia cumque sequi? Sequi.",
-    },
-    thumbnail: "../assets/img/thumbnail-fe/web-music-player.png",
-    video: "../assets/video/0822.mp4",
-  },
+  
 ];
 
 export const dataDesignUI = [

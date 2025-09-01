@@ -12,28 +12,24 @@ import { Routes, Route } from "react-router-dom";
 import { CursorProvider } from "./CustomCursor";
 import Contact from "./components/Contact";
 import Notfound from "./components/NotFound";
-import ProjectFE from "./components/Project";
+import ProjectDetail from "./pages/ProjectDetail";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
-import MyProjectFe from "./pages/MyProjectFe";
+import Project from "./pages/Project";
+import DesignDetail from "./pages/DesignDetail";
 
 function App() {
-  return (
+  return (  
     <>
       <CursorProvider>
         <div className="overflow-x-hidden">
           <Routes>
-            {/* Route untuk halaman utama */}
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/my-project" element={<MyProjectFe />} />
-              <Route path="/web-music-player" element={<ProjectFE/>}/>
-              {/* Routes untuk detail project */}
-              {/* <Route path="/eWallet" element={<Ewallet />} />
-              <Route path="/runTracker" element={<RunTracker />} />
-              <Route path="/siKopi" element={<Kopi />} />
-              <Route path="/myAgro" element={<MyAgro />} /> */}
+              <Route path="/my-project" element={<Project />} />
+              <Route path="/my-project/:id/:title" element={<ProjectDetail />} />
+              <Route path="/design/:id/:title" element={<DesignDetail />} />
               <Route path="*" element={<Notfound />} />
             </Route>
           </Routes>
