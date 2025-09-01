@@ -1,14 +1,15 @@
 import React from "react";
 import Homepage from "../components/Homepage";
-import Skills from "../components/Skills";
+import Tools from "../components/Tools";
 import About from "../components/About";
 import Design from "../components/Design";
+
 
 const Home = () => {
   return (
     <div>
       <Homepage />
-      <Skills />
+      <Tools />
       <About />
       <Design />
     </div>

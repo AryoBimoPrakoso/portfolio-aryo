@@ -3,6 +3,7 @@ import profil from "../assets/img/foto-aryo.jpg";
 import { motion } from "framer-motion";
 import { useCursor } from "../CustomCursor";
 import { Link } from "react-router-dom";
+import AnimatedComponent from "./AnimatedComponent";
 
 const Homepage = () => {
   // Method 3: Gmail compose with pre-filled data
@@ -16,12 +17,7 @@ const Homepage = () => {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -50 }}
-        transition={{ duration: 0.8 }}
-      >
+      <AnimatedComponent delay={0.2}>
         <div
           id="home"
           className="flex flex-col w-full bg-color h-full px-[56px]"
@@ -36,7 +32,6 @@ const Homepage = () => {
                   onMouseLeave={() => setCursorVariant("default")}
                 >
                   Hi there! I'm Aryo 👋
-                  
                 </div>
                 <div
                   className="leading-tight text-4xl lg:text-6xl xl:text-8xl text-left my-4"
@@ -73,14 +68,10 @@ const Homepage = () => {
               />
             </div>
           </div>
-          <div>
-            
-          </div>
         </div>
-      </motion.div>
+      </AnimatedComponent>
     </>
   );
 };
 
 export default Homepage;
-

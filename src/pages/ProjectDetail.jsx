@@ -41,20 +41,23 @@ const ProjectDetail = () => {
   return (
     <div>
       {project ? (
-        <div className="flex flex-col w-full text-center">
-          <div className="flex justify-center">
-            <video
-              ref={ref}
-              onClick={handlePlay}
-              controls
-              className={`transition-all ease-in duration-300 ${
-                video ? "w-4/5 rounded-xl" : "w-full"
-              }`}
-            >
-              <source src={project.video} type="video/mp4" />
-            </video>
-          </div>
-          <div className="h-screen">{project.title}</div>
+        <div className="relative min-h-screen">
+          <video
+            ref={ref}
+            onClick={handlePlay}
+            controls
+            className={`fixed inset-0 w-full h-screen object-cover z-[-1]`}
+          >
+            <source src={project.video} type="video/mp4" />
+          </video>
+          <div className="h-screen relative z-10">{project.title}</div>
+          <div className="h-screen relative z-10 bg-white">{project.title}</div>
+          <div className="h-screen relative z-10">{project.title}</div>
+          <div className="h-screen relative z-10">{project.title}</div>
+          <div className="h-screen relative z-10">{project.title}</div>
+          <div className="h-screen relative z-10">{project.title}</div>
+          <div className="h-screen relative z-10">{project.title}</div>
+          <div className="h-screen relative z-10">{project.title}</div>
         </div>
       ) : (
         <>

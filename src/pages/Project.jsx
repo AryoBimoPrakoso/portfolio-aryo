@@ -13,18 +13,9 @@ const ProjectFe = () => {
       .replace(/-+$/, ""); // Remove trailing hyphens
   };
   return (
-    <div className="mt-[100px]">
-      <div className="flex gap-4 p-14">
-        {dataProject.map((project) => (
-          <div key={project.id} className="bg-red-500">
-            <Link to={`/my-project/${project.id}/${createSlug(project.title)}`}>
-              <div className="p-12">
-                <h1>{project.title}</h1>
-                <img src={project.thumbnail} alt="" />
-              </div>
-            </Link>
-          </div>
-        ))}
+    <div className="mt-[100px] w-full">
+      <div className="flex w-full gap-4 justify-center items-cener p-14">
+        <h1 className="text-3xl">Coming Soon!🙇‍♂️</h1>
       </div>
     </div>
   );

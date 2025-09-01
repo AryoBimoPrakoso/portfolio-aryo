@@ -6,8 +6,5 @@
   },
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-  ],
-  "git": {
-    "deploymentEnabled": false
-  }
+  ]
 }
