@@ -3,17 +3,17 @@ import Video from "../assets/video/0822.mp4";
 import { dataProject } from "../data/data";
 import { useParams } from "react-router-dom";
 
-const ProjectFE = () => {
+const ProjectDetail = () => {
   const ref = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [video, setVideo] = useState(false);
   const [project, setProject] = useState(null);
-  const { id, title } = useParams();
+  const { id, titleSlug } = useParams();
 
   useEffect(() => {
     const projectDetail = dataProject.find((p) => p.id === parseInt(id));
     setProject(projectDetail);
-  }, [id, title]);
+  }, [id, titleSlug]);
 
   useEffect(() => {
     const handleShow = () => {
@@ -48,7 +48,7 @@ const ProjectFE = () => {
               onClick={handlePlay}
               controls
               className={`transition-all ease-in duration-300 ${
-                video ? "w-3/4 rounded-xl" : "w-screen"
+                video ? "w-4/5 rounded-xl" : "w-full"
               }`}
             >
               <source src={project.video} type="video/mp4" />
@@ -64,4 +64,4 @@ const ProjectFE = () => {
     </div>
   );
 };
-export default ProjectFE;
+export default ProjectDetail;

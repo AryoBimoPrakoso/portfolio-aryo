@@ -7,13 +7,13 @@ import { useCursor } from "../CustomCursor";
 
 const DesignDetail = () => {
   const [design, setDesign] = useState(null);
-  const { id, title } = useParams();
+  const { id, titleSlug } = useParams();
   const { setCursorVariant } = useCursor();
 
   useEffect(() => {
     const designDetail = dataDesignUI.find((p) => p.id === parseInt(id));
     setDesign(designDetail);
-  }, [id, title]);
+  }, [id, titleSlug]);
 
   return (
     <>

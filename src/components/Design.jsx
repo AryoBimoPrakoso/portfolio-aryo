@@ -4,8 +4,18 @@ import { GoArrowUpRight } from "react-icons/go";
 import { useCursor } from "../CustomCursor";
 import { dataDesignUI } from "../data/data";
 
-const Project = () => {
+const Design = () => {
   const { setCursorVariant } = useCursor();
+
+  const createSlug = (text) => {
+    return text
+      .toLowerCase()
+      .replace(/\s+/g, "-") // Replace spaces with hyphens
+      .replace(/[^\w-]+/g, "") // Remove non-word and non-hyphen characters
+      .replace(/\-\-+/g, "-") // Replace multiple hyphens with a single hyphen
+      .replace(/^-+/, "") // Remove leading hyphens
+      .replace(/-+$/, ""); // Remove trailing hyphens
+  };
   return (
     <div id="project" className="w-full h-full pt-12 lg:pt-24 pb-12 bg-color">
       <div className="px-14">
@@ -38,7 +48,7 @@ const Project = () => {
                 <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
                   <h3 className="text-lg font-semibold mb-2">{design.title}</h3>
                   <button className="px-4 py-2 bg-white text-black rounded-md hover:scale-110 transition-all duration-300 cursor-pointer">
-                    <Link to={`/design/${design.id}/${design.title}`}>
+                    <Link to={`/design/${design.id}/${createSlug(design.title)}`}>
                       More
                     </Link>
                   </button>
@@ -52,4 +62,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Design;

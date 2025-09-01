@@ -19,6 +19,8 @@ import Project from "./pages/Project";
 import DesignDetail from "./pages/DesignDetail";
 
 function App() {
+
+
   return (  
     <>
       <CursorProvider>
@@ -28,8 +30,8 @@ function App() {
               <Route index element={<Home />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/my-project" element={<Project />} />
-              <Route path="/my-project/:id/:title" element={<ProjectDetail />} />
-              <Route path="/design/:id/:title" element={<DesignDetail />} />
+              <Route path="/my-project/:id/:titleSlug" element={<ProjectDetail />} />
+              <Route path="/design/:id/:titleSlug" element={<DesignDetail />} />
               <Route path="*" element={<Notfound />} />
             </Route>
           </Routes>
