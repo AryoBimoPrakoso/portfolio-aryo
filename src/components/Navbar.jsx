@@ -47,14 +47,6 @@ const Navbar = () => {
     showNavbar = !scrollState.isTop;
   }
 
-  console.log("pathname:", pathname);
-  console.log(
-    "isProjectList:",
-    isProjectList,
-    "isProjectDetail:",
-    isProjectDetail
-  );
-  console.log("isTop:", scrollState.isTop, "showNavbar:", showNavbar);
 
   return (
     <div
