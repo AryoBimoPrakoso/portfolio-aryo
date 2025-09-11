@@ -64,7 +64,7 @@ const Homepage = () => {
                 onMouseLeave={() => setCursorVariant("default")}
                 src={profil}
                 alt="Foto Profil"
-                className="rounded-md w-3/4 lg:w-full"
+                className="rounded-xl w-3/4 lg:w-full"
               />
             </div>
           </div>

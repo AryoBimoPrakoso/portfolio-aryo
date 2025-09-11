@@ -22,13 +22,13 @@ const Contact = () => {
 
     try {
       // Deteksi environment dan gunakan endpoint yang sesuai
-      const isDev = window.location.hostname === 'localhost' || 
-                   window.location.hostname === '127.0.0.1' ||
-                   window.location.port === '5173';
-      
+      const isDev = window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.port === '5173';
+
       let apiUrl;
       let useDevServer = false;
-      
+
       if (isDev) {
         // Untuk development, coba Vercel dev dulu, fallback ke Express server
         apiUrl = '/api/send-contact';
@@ -41,7 +41,7 @@ const Contact = () => {
       console.log(`🚀 Sending to: ${apiUrl} (Dev mode: ${isDev})`);
 
       let response;
-      
+
       try {
         // Coba endpoint pertama
         response = await fetch(apiUrl, {
@@ -91,9 +91,9 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('❌ Submit error:', error);
-      
+
       let errorMessage = 'Failed to send message. ';
-      
+
       if (error.name === 'TypeError' && error.message.includes('fetch')) {
         errorMessage += 'Please make sure the server is running. ';
         if (window.location.hostname === 'localhost') {
@@ -102,7 +102,7 @@ const Contact = () => {
       } else {
         errorMessage += error.message || 'Please try again later.';
       }
-      
+
       Swal.fire({
         title: 'Error!',
         text: errorMessage,
@@ -137,9 +137,15 @@ const Contact = () => {
                 Send me a message using the form, and I'll get back to you
                 shortly.
               </p>
-              <p className="opacity-60 text-md lg:text-xl">
-              📍Based on Jakarta, Indonesia
-              </p>
+              <div className="mt-4 flex flex-col gap-3">
+                <p className="opacity-60 text-md lg:text-xl">
+                  📍Based on Jakarta, Indonesia
+                </p>
+                <p className="opacity-60 text-md lg:text-xl">
+                  ✉️ prakosoaryobimo@gmail.com
+                </p>
+              </div>
+
             </div>
           </div>
           <div className="bg-[#e6e6e6] w-full p-[32px] rounded-xl inset-shadow-sm mt-12">

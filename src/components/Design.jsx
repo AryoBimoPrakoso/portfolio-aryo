@@ -36,7 +36,6 @@ const Design = () => {
         <div className="w-full bg-[#e6e6e6] rounded-md">
           <div className="p-2 w-full h-full hidden lg:grid grid-cols-3 auto-rows-[250px] gap-4">
             {dataDesignUI.map((design, index) => (
-              <>
                 <AnimatedComponent
                   key={design.id}
                   delay={index * 0.2} // animasi berurutan
@@ -64,17 +63,15 @@ const Design = () => {
                     </button>
                   </div>
                 </AnimatedComponent>
-              </>
             ))}
           </div>
         </div>
         <div className="flex gap-3 flex-col lg:hidden">
           {dataDesignUI.map((design, index) => (
-            <Link to={`/design/${design.id}/${createSlug(design.title)}`}>
+            <Link key={design.id} to={`/design/${design.id}/${createSlug(design.title)}`}>
               <AnimatedComponent
                 delay={index * 0.2}
                 className="flex justify-between border-b-1"
-                key={design.id}
               >
                 <h1>{design.title}</h1>
                 <GoArrowUpRight />
