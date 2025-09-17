@@ -20,7 +20,6 @@ import DesignDetail from "./pages/DesignDetail";
 
 function App() {
 
-
   return (  
     <>
       <CursorProvider>

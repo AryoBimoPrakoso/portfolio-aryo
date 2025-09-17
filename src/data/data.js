@@ -13,14 +13,19 @@ import runTrackerThumbnail from "../assets/img/thumbnail-design/run-tracker-thum
 import webMusicPlayer from "../assets/img/thumbnail-fe/web-music-player.png";
 import webMusicPlayer1 from "../assets/img/thumbnail-fe/music-1.jpg";
 import webMusicPlayer2 from "../assets/img/thumbnail-fe/music-2.jpg";
-import fragrances1 from "../assets/img/thumbnail-fe/fragrances.png"
-import fragrances2 from "../assets/img/thumbnail-fe/fragrances-1.jpg"
-import fragrances3 from "../assets/img/thumbnail-fe/fragrances-2.jpg"
+import fragrances1 from "../assets/img/thumbnail-fe/fragrances.png";
+import fragrances2 from "../assets/img/thumbnail-fe/fragrances-1.jpg";
+import fragrances3 from "../assets/img/thumbnail-fe/fragrances-2.jpg";
+import todo1 from "../assets/img/thumbnail-fe/todo1.png";
+import todo2 from "../assets/img/thumbnail-fe/todo2.jpg";
+import todo3 from "../assets/img/thumbnail-fe/todo3.jpg";
+
 
 
 // Video
 import webMusicPlayerMp4 from "../assets/video/0822.mp4";
 import webShoppingCartMp4 from "../assets/video/0911.mp4"
+import webTodoListMp4 from "../assets/video/0917.mp4"
 
 // TOOL SVG
 import FigmaSVG1 from "../assets/svg/figma.svg";
@@ -33,6 +38,7 @@ import instagramSVG from "../assets/svg/instagram.svg";
 import linkedinSVG from "../assets/svg/linkedin.svg";
 import htmlSVG from "../assets/svg/html.svg";
 import cssSVG from "../assets/svg/css.svg";
+import viteSVG from "../assets/svg/vite.svg"
 
 // TOOL PNG
 import shadcn from "../assets/img/shadcn.png"
@@ -95,12 +101,46 @@ export const dataProject = [
         id: "shadcnUI",
         icon: shadcn,
       },
+      {
+        id: "vite",
+        icon: viteSVG,
+      },
     ],
     image: {
       image1: fragrances2,
       image2: fragrances3
     },
     sourceCode: "https://github.com/AryoBimoPrakoso/belajar-shopping-cart"
+  },
+  {
+    id: 3,
+    title: "Web To-do List",
+    description: {
+      A: "This simple web-based to-do list app was built with Create React App and styled using Tailwind CSS. It features a clean, modern interface with an elegant dark background. At the center of the screen sits a white card container with the title “My to-do-list” clearly displayed at the top.",
+      B: "The app’s main functionality includes an input field where users can type in a new task (with the placeholder text “Enter a new task”) and a dark-themed “Add task” button to add it to the list. Once added, each task appears as a list item with a checkbox on the left to mark its completion status. Example tasks might include: “Designing the main page UI,” “Attempting integration with the database,” “Writing project documentation,” and “Reading data visualization literature references.” Completed tasks are shown with a checked box and crossed-out text for easy distinction.",
+      C: "On the right side of each item, there’s a red “Delete” button that lets users remove tasks they no longer need. Tailwind CSS provides consistent styling, neat spacing, and responsive layout throughout the app. Under the hood, the app likely uses React hooks like useState to manage the task list and useEffect to persist data in localStorage, along with event handlers for adding, deleting, and toggling the completion status of tasks.",
+    },
+    thumbnail: todo1,
+    video: webTodoListMp4,
+    tools: [
+      {
+        id: "react",
+        icon: ReactSVG1,
+      },
+      {
+        id: "tailwind",
+        icon: TailwindSVG1,
+      },
+      {
+        id: "javascript",
+        icon: JsSVG1,
+      },
+    ],
+    image: {
+      image1: todo2,
+      image2: todo3
+    },
+    sourceCode: "https://github.com/AryoBimoPrakoso/to-do-list"
   },
 ];
 

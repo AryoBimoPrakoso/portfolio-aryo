@@ -27,7 +27,7 @@ export const CursorProvider = ({ children }) => {
       width: 150,
       x: mousePosition.x - 75,
       y: mousePosition.y - 75,
-      backgroundColor: "white",
+      backgroundColor: "yellow",
       mixBlendMode: "difference",
     },
   };

@@ -3,7 +3,7 @@
 }
 
 .cursor {
-  background-color: #111;
+  background-color: blue;
   z-index: 10000;
   height: 32px;
   width: 32px;
